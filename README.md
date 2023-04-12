@@ -10,12 +10,12 @@ Designed to run using unreleased jhipster v8.
 
 Got to your project folder, add the repository as a sub-module at the local blueprint folder:
 
-```
+```sh
 git submodule add https://github.com/mshima/local-blueprints-samples.git .blueprint
 ```
 
-Regenerate using the blueprint you want:
+Regenerate using the local blueprint you want:
 
-```
-jhipster --enable-local-blueprint xx1 xxx2
+```sh
+jhipster --enable-local-blueprint xx1 xxx2 # where xx1 and xx2 are app/xx1.mjs and app/xx2.mjs files
 ```
