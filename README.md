@@ -1,4 +1,4 @@
-# local-blueprints-samples
+# local-blueprints
 
 This repository contains local blueprints that can be integrated into a jhipster project.
 
@@ -11,7 +11,7 @@ Designed to run using unreleased jhipster v8.
 Got to your project folder, add the repository as a sub-module at the local blueprint folder:
 
 ```sh
-git submodule add https://github.com/mshima/local-blueprints-samples.git .blueprint
+git submodule add https://github.com/mshima/local-blueprints.git .blueprint
 ```
 
 Regenerate using the local blueprint you want:
