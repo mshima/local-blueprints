@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const localBlueprintPath = localBlueprint => join(__dirname, `${localBlueprint}.mjs`);
 
 /**
- * @param {import('yeoman-environment')}
+ * @param {import('yeoman-environment').default}
  * @return {import('generator-jhipster/generators/base-application').default}
  */
 export const getBaseApplication = async env => {
@@ -17,7 +17,7 @@ export const getBaseApplication = async env => {
     // Fallback to the currently running jhipster.
     return await env.requireGenerator('jhipster:base-application');
   }
-}
+};
 
 export const createGenerator = async env => {
   const BaseApplication = await getBaseApplication(env);

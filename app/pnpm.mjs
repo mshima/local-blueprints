@@ -1,4 +1,4 @@
-import { getBaseApplication } from "./generator.mjs";
+import { getBaseApplication } from './generator.mjs';
 
 export const createGenerator = async env => {
   const BaseApplication = await getBaseApplication(env);
@@ -25,12 +25,12 @@ export const createGenerator = async env => {
   
   Here are the details
   
-  pnpm "$@"`
+  pnpm "$@"`,
             );
           }
           if (application.buildToolGradle) {
             this.editFile('build.gradle', { ignoreNonExisting: true }, content =>
-              content.replaceAll('NpmTask', 'PnpmTask').replaceAll('npm_install', 'pnpm_install')
+              content.replaceAll('NpmTask', 'PnpmTask').replaceAll('npm_install', 'pnpm_install'),
             );
             this.editFile('gradle/profile_dev.gradle', content => content.replaceAll('NpmTask', 'PnpmTask'));
           }
