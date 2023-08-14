@@ -24,6 +24,7 @@ jhipster --enable-local-blueprint xx1 xxx2 # where xx1 and xx2 are app/xx1.mjs a
 
 Customizations and it's status.
 
+- context-path (partial): add context-path to the application (angular).
 - pnpm (stub): use pnpm as node package manager.
 
 ### Status
