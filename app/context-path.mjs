@@ -69,10 +69,12 @@ export const createGenerator = async env => {
                 .replace('context: serverResources,', 'context: serverResources.map(res => `${contextPath}${res}`),'),
             );
           }
-          if (!application.skipServer) {
+          if (!application.skipClient) {
             this.editFile('src/main/webapp/swagger-ui/index.html', content =>
               content.replace('<base href="/swagger-ui/"', `<base href="${this.contextPath}/swagger-ui/"`),
             );
+          }
+          if (!application.skipServer) {
             this.editFile('src/main/resources/config/application.yml', content => `${content}
 ---
 server:
