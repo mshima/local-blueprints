@@ -1,4 +1,3 @@
-import { stringify as stringifyYaml } from 'yaml';
 import { getBaseApplication } from './generator.mjs';
 
 export const createGenerator = async env => {
@@ -74,13 +73,12 @@ export const createGenerator = async env => {
             this.editFile('src/main/webapp/swagger-ui/index.html', content =>
               content.replace('<base href="/swagger-ui/"', `<base href="${this.contextPath}/swagger-ui/"`),
             );
-            this.concatDestinationYaml('src/main/resources/config/application.yml', {
-              server: {
-                servlet: {
-                  'context-path': `${this.contextPath}/`,
-                },
-              },
-            });
+            this.editFile('src/main/resources/config/application.yml', content => `${content}
+---
+server:
+  servlet:
+    context-path: ${this.contextPath}/
+`);
           }
         },
       });
