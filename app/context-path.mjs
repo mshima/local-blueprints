@@ -83,14 +83,5 @@ server:
         },
       });
     }
-
-    concatDestinationYaml(filepath, value) {
-      this.editFile(filepath, content => {
-        return `${content}
----
-${stringifyYaml(value)}
-`;
-      });
-    }
   };
 };
