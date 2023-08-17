@@ -4,11 +4,11 @@ This repository contains local blueprints that can be integrated into a jhipster
 
 ### Warning
 
-Designed to run using unreleased jhipster v8.
+Designed to run using jhipster v8.
 
 ### Usage
 
-Got to your project folder, add the repository as a sub-module at the local blueprint folder:
+Go to your project folder, add the repository as a sub-module at the local blueprint folder:
 
 ```sh
 git submodule add https://github.com/mshima/local-blueprints.git .blueprint
